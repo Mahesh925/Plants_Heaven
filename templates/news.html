@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant News</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='info.css') }}">
+
+    <!-- Internal Styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+    
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+    
+        #news-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    
+        .article {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+        }
+
+        .article img {
+            max-width: 290px;
+            height: 160px;
+            margin-bottom: 10px;
+        }
+    
+        h2 {
+            color: #333;
+        }
+    
+        p {
+            color: #666;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <nav class="navigation">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Your Logo" class="logo">
+        <span class="navigation-text">PLANT'S HEAVEN</span>
+        <a href="/">PREDICT</a>
+        <a href="/news">NEWS</a>
+        <a href="/dict">LIBRARY</a>
+        <a href="/info">ABOUT</a>
+    </nav>
+
+    <h1>Plant News</h1>
+    <div id="news-container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const newsContainer = document.getElementById('news-container');
+            const articleIframe = document.getElementById('article-iframe');
+            const apiKey = '0f178db54de541a793af53d52e1196e6';
+    
+            // Fetch crop-related news in English from NewsAPI
+            fetch(`https://newsapi.org/v2/everything?q=${encodeURIComponent('plants and crops')}&from=2024-08-10&sortBy=publishedAt&language=en&apiKey=${apiKey}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Check if the response was successful
+                    if (data.status === 'ok') {
+                        // Iterate through each news article and create HTML elements
+                        data.articles.forEach(article => {
+                            // Check if all necessary data is available
+                            if (article.title && article.urlToImage && article.description && article.publishedAt && article.url) {
+                                const articleElement = document.createElement('div');
+                                articleElement.className = 'article';
+                                articleElement.innerHTML = `
+                                    <img src="${article.urlToImage}" alt="${article.title}">
+                                    <div class="article-details">
+                                        <h2><a href="${article.url}" target="_blank">${article.title}</a></h2>
+                                        <p>${article.description}</p>
+                                        <p>Published on: ${new Date(article.publishedAt).toLocaleDateString()}</p>
+                                    </div>
+                                    <hr>
+                                `;
+                                newsContainer.appendChild(articleElement);
+    
+                                // Add click event listener to toggle visibility of article details
+                                articleElement.addEventListener('click', function () {
+                                    const articleDetails = articleElement.querySelector('.article-details');
+                                    articleDetails.style.display = articleDetails.style.display === 'none' ? 'block' : 'none';
+    
+                                    // Load the article in the iframe
+                                    const articleUrl = articleElement.querySelector('h2 a').getAttribute('href');
+                                    articleIframe.src = articleUrl;
+                                    articleIframe.style.display = 'block';
+                                });
+                            }
+                        });
+                    } else {
+                        console.error('Error fetching news:', data.message);
+                    }
+                })
+                .catch(error => console.error('Error fetching news:', error));
+        });
+    </script>
+    
+    
+
+</body>
+</html> 

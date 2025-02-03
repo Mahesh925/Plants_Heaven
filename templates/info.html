@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='info.css') }}">
+
+    <title>About us</title>
+</head>
+<body>
+
+
+    <nav class="navigation">
+    
+   <img src="{{ url_for('static', filename='logo.png') }}" alt="Your Logo" class="logo"  >
+ <span class="navigation-text">PLANT'S HEAVEN</span>
+       
+ <a href="/">PREDICT</a>
+          
+<a href="/news">NEWS</a>  
+<a href="/dict">LIBRARY</a>
+ <a href="/info">ABOUT</a>
+
+    <!-- Inside your <nav> element or any suitable location -->
+
+</nav>
+
+  <script src="js/info.js"></script>
+  
+<script src="{{ url_for('static', filename='info.js') }}"></script>
+
+
+<section>
+    <div class="container.content" style="background-image: url('{{ url_for('static', filename='upper image.jpg') }}'); background-size: cover; background-repeat: no-repeat; display: inline-block;width: 1400px; height: 400px; position: relative;">
+        <div class="content" style="position: absolute; top: 35%; left: 0; width: 100%; height: 100%;  padding: 20px; box-sizing: border-box;">
+            <h1>Plants Heaven</h1>
+            <p>In an ever-evolving world of agriculture, where crops are the lifeblood of nations, ensuring their health and vitality is of paramount importance. We are thrilled to introduce you to a revolutionary online platform that has been meticulously crafted to serve as your one-stop solution for all things related to plant diseases – the Plant Disease Prediction Website.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Second Section with Provided Content -->
+    <section>
+        <div class="rich-text-block website-wysiwyg w-full max-w-5xl transition-all duration-300 text-left ml-0 mr-auto" style="color: rgb(0, 0, 0);">
+            <h3 style="white-space: pre-line">About us</h3>
+            <p style="white-space: pre-line">Plants Heaven is a trusted source of plant disease information based in Mumbai, MH. Our mission is to provide accurate and up-to-date information to help plant enthusiasts and professionals diagnose and treat plant diseases effectively. With a team of experienced researchers and experts in the field, we strive to be the go-to resource for all your plant disease-related queries. Whether you are a gardener, farmer, or a plant enthusiast, Plants Heaven is here to empower you with the knowledge and tools to keep your plants healthy and thriving.</p>
+        </div>
+    </section>
+
+    <!-- Third Section with 3 Vertical Sections -->
+    <section class="row">
+        <div class="vertical-section">
+    
+               <img src="{{ url_for('static', filename='plant.jpg') }}" alt="Image 1"  >
+            <p>DISEASE IDENTIFICATION</p>
+            <button  class="more-info-button" data-target="/">More Info</button>
+        </div>
+        <div class="vertical-section">
+       
+              <img src="{{ url_for('static', filename='prevent.jpg') }}" alt="Image 2"  >
+           <p>PREVENTIVE STARTEGY</p>
+            <button class="more-info-button"  data-target="/dict">More Info</button>
+        </div>
+        <div class="vertical-section">
+           
+                <img src="{{ url_for('static', filename='leaf.jpg') }}" alt="Image 3"  >
+            <p>PLANT LATEST INFO</p>
+            <button class="more-info-button"  data-target="/news">More Info</button>
+        </div>
+    </section>
+   <section class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+        <p id="confirmationMessage"></p>
+    </section>
+    <!-- Fourth Section as Footer -->
+    <footer>
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-box-layer">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="sb-caption">
+                            <h4>Our Office</h4>
+                            <p> Vasai,Palghar <br> Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-box-layer">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="sb-caption">
+                            <h4>Call Us</h4>
+                            <p>718-825-3320<br>212-632-4120</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-box-layer">
+                        <i class="fas fa-envelope"></i>
+                        <div class="sb-caption">
+                            <h4>Email Address</h4>
+                            <p>info@plantsheaven.com<br>help@plantsheaven.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

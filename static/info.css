@@ -1,0 +1,223 @@
+
+
+/*Contacts*/
+
+.contact {
+    background-color: #14b551;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact label {
+    font-weight: bold;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+/* Navigation */
+nav.navigation {
+   
+    display: flex;
+    align-items: center;
+}
+img.logo {margin-right: 200px;
+    position: static;
+    width: 100px;
+    height: 80px;}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    background-color: #37643e;;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0; /* Add padding to center-align links */
+    font-size: xx-large;
+    justify-content: center;}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 20px; /* Add margin to create space between links */
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #ff5733; /* Change the color on hover */
+}
+#language-selector {
+    padding: 5px;
+    font-size: 16px;}
+/* Apply some basic styles to the sections */
+
+
+
+
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}  
+.content{
+    position: absolute;
+      top: 45%;
+      color: #fffbfb; /* Text color */
+      padding: 20px;
+      font-size: 24px; /* Adjust the font size as needed */
+      text-align: left;}
+
+
+
+
+/*  sections */
+   section {
+            background-color: rgb(242, 234, 215);;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Add some spacing between the sections */
+        section + section {
+            margin-top: 0.2px;
+        }
+
+        /* Style the image */
+img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+      
+
+        /* Style the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px; /* Increased padding for the footer */
+        }
+
+       * {
+  box-sizing: border-box;
+}
+/* Add this CSS to your stylesheet (e.g., info.css) */
+.vertical-section {
+    text-align: center; /* Center align the content horizontally within each section */
+    display: inline-block;
+    margin: 0 20px;
+    width: 30%; /* Adjust the width as needed to uniformly align the content */
+}
+
+.vertical-section img {
+    display: block; /* Center the image within each section */
+    margin: 0 auto;
+}
+
+.vertical-section p,
+.vertical-section button {
+    margin-top: 10px; /* Add some space between the text and button */
+}
+
+.more-info-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/* Add this CSS to your stylesheet (e.g., info.css) */
+@media(min-width: 1280px) {
+    .rich-text-block.website-wysiwyg h1 {
+        font-size:72px;
+        line-height: 80px;
+        margin-bottom: 1.5rem
+    }
+
+    .rich-text-block.website-wysiwyg h2 {
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 1.5rem
+    }
+
+    .rich-text-block.website-wysiwyg h3 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 1rem
+    }
+
+    .rich-text-block.website-wysiwyg blockquote,.rich-text-block.website-wysiwyg blockquote p {
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center
+    }
+
+    .rich-text-block.website-wysiwyg p.large {
+        font-size: 24px;
+        line-height: 36px
+    }
+
+    .rich-text-block.website-wysiwyg,.rich-text-block.website-wysiwyg li,.rich-text-block.website-wysiwyg p {
+        font-size: 18px;
+        line-height: 28px
+    }
+
+    .rich-text-block.website-wysiwyg p.small,.rich-text-block.website-wysiwyg small {
+        font-size: 16px;
+        line-height: 21px
+    }
+
+    .rich-text-block.website-wysiwyg figure,.rich-text-block.website-wysiwyg img,.rich-text-block.website-wysiwyg li:not(:last-child),.rich-text-block.website-wysiwyg p:not(:last-child) {
+        margin-bottom: 1.5rem
+    }
+
+
+
+ }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="{{ url_for('static', filename='dict.css') }}">
+    <title>Dictionary Page</title>
+</head>
+<body>
+    <nav class="navigation">
+     
+             <img src="{{ url_for('static', filename='logo.png') }}" alt="Your Logo" class="logo"  >
+      <span class="navigation-text">PLANT'S HEAVEN</span>
+
+      <a href="/">PREDICT</a>
+       
+<a href="/news">NEWS</a> 
+
+     <a href="/dict">LIBRARY</a>
+      <a href="/info">ABOUT</a>
+     
+    <!-- Inside your <nav> element or any suitable location -->
+
+</nav>
+ 
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="slides">
+                <div class="content">
+                    <div class="left">
+                        <h2>Machine Learning</h2>
+                        <p>
+                            Machine learning is a subset of artificial intelligence that focuses on the development of algorithms and statistical models to enable computers to improve their performance on a specific task through learning from data.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img src="/static/machine.jpg" alt="Machine Learning Image">
+                    </div>
+                </div>
+            </div>
+            <div class="slides">
+                <div class="content">
+                    <div class="left">
+                        <img src="/static/plantdetect.jpg" alt="Plant Prediction Image">
+                    </div>
+                    <div class="right">
+                        <h2>Plant Prediction</h2>
+                        <p>
+                            Plant prediction is a fascinating application of machine learning, where algorithms can analyze plant features and predict their species or health condition.
+                        </p>
+                        <div class="button-container">
+                            <button id="predictButton">Predict Plants</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+       <section>
+         
+    <section>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">Search</button>
+            <button id="backButton">Back</button>
+               
+        </div> 
+    </section>
+    <section id="section2">
+        <div id="divisionContainer"></div>
+    </section>
+<section id ="section3" display="none">
+    
+        <iframe id="iframe" src="" frameborder="0"></iframe>
+      
+
+
+</section>
+    </div>
+
+  
+
+
+
+
+
+    
+    <script src="js/index.js"></script>
+<script src="{{ url_for('static', filename='dict.js') }}"></script>
+
+</body>
+</html>
